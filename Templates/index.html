@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Send Data to Flask App{% endblock %}
+
+{% block content %}
+<h2>Send Data to Flask App</h2>
+
+<form method="POST" action="/">
+  <label for="username">Enter Username:</label>
+  <input type="text" id="username" name="username" required>
+  <button type="submit">Submit</button>
+</form>
+
+<br>
+<a href="/users">See all users</a>
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+{% endblock %}
+
