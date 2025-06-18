@@ -57,7 +57,7 @@ def delete_user(user_id):
     flash("User deleted successfully!")
     return redirect(url_for('users'))
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run()
 if __name__ == "__main__":
     app.run()
