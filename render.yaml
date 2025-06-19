@@ -2,7 +2,7 @@ services:
   - type: web
     name: flask-web-app
     env: python
-    region: oregon
+    region: singapore
     plan: free
     branch: main
     buildCommand: ""
